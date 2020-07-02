@@ -1,11 +1,41 @@
-<!doctype html>
-<html>
-<head>
-    <title>스프링 부트 웹서비스</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
+{{>layout/haeder}}
+<!-- { {>} }는 현재 머스테치 파일 을  기준으로 다른 파일을 가져옵니다.-->
+        <h1>스프링 부트로 시작하는 웹서비스</h1>
+        <dov class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+                </div>
+            </div>
+        </dov>
+        <br>
+        <!--목록 출력 영역 -->
+        <table class="table table-horizontal table-bordered">
+                <thead clas="thead-strong">
+                <tr>
+                    <td>게시판번호</td>
+                    <td>제목</td>
+                    <td>작설자</td>
+                    <td>최종수정일</td>
+                </tr>
+                </thead>
+            <tbody id="tbody">
+                {{#posts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{title}}</td>
+                    <td>{{author}}</td>
+                    <td>{{modifiedDate}}</td>
+                </tr>
+               {{/posts}}
+            </tbody>
+        </table>
+</div>
 
-<h1>스프링 부트로 시작하는 웹서비스</h1>
-</body>
-</html>
+
+{{>layout/footer}}
+<!--
+{ {  #posts } } posts 라는 lits를 순회합니다.
+java for == { {#posts} }-->
+
+<!--{ {병수명} }-->
