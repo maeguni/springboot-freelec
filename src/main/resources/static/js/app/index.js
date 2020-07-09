@@ -74,7 +74,6 @@ var main = {
            }).fail(function (error) {
                 alert(json.stringify(error));
            })
-
     }
 
 };
