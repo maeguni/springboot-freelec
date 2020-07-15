@@ -34,14 +34,16 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-mustache')
-    compile('com.h2database:h2')
+    compile('org.springframework.session:spring-session-jdbc')
     // 인메모리 관계형 데이터베이스
     //설치 x 의존성만으로 관리할수있음
     //메모리에서 실행되기 때문에 app 재시작하면 초기화됨 테스트 용도
+    compile('com.h2database:h2')
+    // spring boot jpa 추상화 라이브러리
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     //소셜로그인 등 클라이언트 입장에서 소셜 기능 구현 시 필요한 의존성
     //spring-boot-starte-oauth2-client와 spring-boot-starte-oauth2-jose를 기본으로 관리
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
-    // spring boot jpa 추상화 라이브러리
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
 }
