@@ -10,7 +10,7 @@ branches:
 cache:
   directories:
     - '$HOME/.m2/repository'
-    - '$Home/.gradle'
+    - '$HOME/.gradle'
 
 script: "./gradlew clean build"
 
