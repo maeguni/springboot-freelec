@@ -75,8 +75,9 @@
 -ec2 서버 테이블 생성 및 application-real.properties 추가
 
 
+2021 06 15
 
-
+-책마무리 시작
     
 
 
